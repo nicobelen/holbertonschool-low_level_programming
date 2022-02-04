@@ -5,7 +5,6 @@
 *
 * Return: Always 0 (Success)
 */
-
 int main(void)
 
 {
@@ -17,17 +16,14 @@ int main(void)
 			{
 				for (k = (j + 1); k <= '9'; k++)
 				{
-					if (i != j && j != k && k != i)
-					{
 						putchar(i);
 						putchar(j);
 						putchar(k);
 
-						if (i < '7' || j < '8' || k < '9')
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					if (i < '7' || j < '8' || k < '9')
+					{
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
