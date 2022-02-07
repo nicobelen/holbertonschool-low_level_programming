@@ -1,11 +1,11 @@
 #include "main.h"
 #include <ctype.h>
 /**
-*
 * _isalpha - check code
 *
 * @c: parametro
 *
+* Return: Always 0
 */
 
 int _isalpha(int c)
