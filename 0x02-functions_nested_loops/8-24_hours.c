@@ -19,7 +19,7 @@ void jack_bauer(void)
 			_putchar((j / 10) + '0');
 			_putchar((j % 10) + '0');
 
-		if (i < 98)
+		if (i <= 23)
 		{
 			_putchar('\n');
 		}
