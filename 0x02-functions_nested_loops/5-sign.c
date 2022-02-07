@@ -1,9 +1,10 @@
 #include "main.h"
 /**
+* print_sign - check code
 *
+* @n: parametro
 *
-*
-*
+* Return: Always 0
 */
 
 int print_sign(int n)
