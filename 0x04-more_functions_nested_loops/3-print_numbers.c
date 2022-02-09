@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-*
-*
+* print_numbers - code
+* Return: something
 *
 */
 void print_numbers(void)
