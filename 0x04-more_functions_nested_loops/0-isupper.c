@@ -13,10 +13,5 @@ int _isupper(int c);
 	{
 		return (1);
 	}
-	else
-	{
-		c = (97 - 122)
-	}
-
 	return (0);
 }
