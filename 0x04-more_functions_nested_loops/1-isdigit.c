@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-*
-*
-*
+* _isdigit - code
+* @c: parameter
+* Return: something
 */
 int _isdigit(int c)
 {
