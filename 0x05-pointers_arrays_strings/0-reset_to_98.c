@@ -2,7 +2,7 @@
 
 /**
 * reset_to_98 - code
-* @*n: parameter
+* @n: parameter
 *
 */
 void reset_to_98(int *n)
