@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+* rev_string - code
 * _strlen - code
 * @s: parameter
 * Return: reverse string
