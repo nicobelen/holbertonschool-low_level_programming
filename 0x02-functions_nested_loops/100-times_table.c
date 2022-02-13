@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-*
-*
-*
+* print_times_table - code
+* @n: parameter
+* Return: void
 */
 
 void print_times_table(int n)
@@ -39,7 +39,7 @@ void print_times_table(int n)
 
 				_putchar((res % 10) + '0');
 			}
-			
+
 			_putchar('\n');
 		}
 	}
