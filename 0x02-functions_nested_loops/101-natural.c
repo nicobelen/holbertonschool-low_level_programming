@@ -7,16 +7,17 @@
 */
 int main(void)
 {
-	int i, n = 1024;
+	int i, sum;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < 1024; i++)
 	{
-		if (i % 3 == n && i % 5 == n)
+		if ((i % 3 == 0) || (i % 5 == 0))
 		{
-			putchar(i);
-			putchar(' ');
+			sum += i;
 		}
 	}
+
+	printf("%d\n", sum);
 
 	return (0);
 }
