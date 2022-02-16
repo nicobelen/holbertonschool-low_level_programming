@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-*
-*
-*
+* cap_string - code
+* @s: pointer
+* Return: s
 *
 */
 char *cap_string(char *s)
