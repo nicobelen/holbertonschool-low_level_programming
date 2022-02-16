@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-*
-*
-*
+* leet - code
+* @s: parametro
+* Return: s
 *
 */
 char *leet(char *s)
