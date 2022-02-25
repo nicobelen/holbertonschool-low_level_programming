@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
-*
-*
-*
+* main- check code
+* @argc: unused attribute
+* @argv: print
+* Return: 0
 */
 int main(int argc __attribute__((unused)), char *argv[])
 {

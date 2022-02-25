@@ -3,9 +3,10 @@
 #include "main.h"
 
 /**
-*
-*
-*
+* main - check code
+* @argc: print all arguments
+* @argv: print all arguments
+* Return: 0
 */
 int main(int argc, char *argv[])
 {
