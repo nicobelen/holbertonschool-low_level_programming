@@ -1,2 +1,3 @@
 #!/bin/bash
-gcc flags -c *.c | ar -rc liball.a *.o
+gcc -Werror -pedantic -Werror -Wextra -c *.c
+ar -rc liball.a *.o
