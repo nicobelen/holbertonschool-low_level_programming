@@ -1,59 +1,42 @@
-#include "main.h"
+#	include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
-* _strlen - code
-* @s: parameter
-* Return: something
-*/
-int _strlen(char *s)
-{
-    int len = 0;
-
-    while (*s != '\0')
-    {
-        len++;
-        s++;
-    }
-
-    return (len);
-}
-
-/**
-*
-*
-*
-*
+* str_concat - check code
+* @s1: pointer s1
+* @s2: pointer s2
+* Return: ret
 */
 char *str_concat(char *s1, char *s2)
 {
 	char *ret;
-	int len, i, str1, str2;
+	int i, j, str1, str2;
 
 	if (s1 == NULL)
-		return (NULL);
-	
+		s1 = "";
+
 	if (s2 == NULL)
+		s2 = "";
+
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+	j++;
+
+	ret = malloc(i * sizeof(*s1) + j * sizeof(*s2));
+
+	if (ret == 0)
 		return (NULL);
-	
-	str1 = _strlen(s1);
-	str2 = _strlen(s2);
-	len = str1 + str2 + 1;
 
-	ret = malloc(sizeof(char) * len);
-
-	for (i = 0; i < str1; i++)
+	for (str1 = 0, str2 = 0; str1 < i + j; str1++)
 	{
-		ret[i] = s1[i];
+		if (str1 < i)
+			ret[str1] = s1[str1];
+		else
+			ret[str1] = s2[str2++];
 	}
-
-	for (i = 0; i < str2; i++)
-	{
-		ret[i + str1] = s2[i];
-	}
-
-	ret[i] = '\0';
 
 	return (ret);
 }
