@@ -25,7 +25,6 @@ int _strlen(char *p)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *can;
 	int namelen = _strlen(name) + 1;
 	int ownerlen = _strlen(owner) + 1;
 	int  i;
@@ -33,6 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (name && owner)
 	{
 		can = malloc(sizeof(dog_t));
+		dog_t *can;
 
 		if (can == NULL)
 			return (NULL);
@@ -47,7 +47,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 
-		for (i = 0; i < namelen + 1; i++)
+		for (i = 0; i < namelen; i++)
 			can->name[i] = name[i];
 
 		can->owner = malloc(sizeof(char) * ownerlen);
@@ -59,7 +59,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 
-		for (i = 0; i < ownerlen + 1; i++)
+		for (i = 0; i < ownerlen; i++)
 			can->owner[i] = owner[i];
 
 		return (can);
