@@ -2,14 +2,13 @@
 #define dog_H
 #include <stdio.h>
 #include <stdlib.h>
+typedef struct dog dog_t;
 /**
 * struct dog - structure
 * @name: data
 * @age: data
 * @owner: data
 */
-typedef struct dog dog_t;
-
 struct dog
 {
 char *name;
