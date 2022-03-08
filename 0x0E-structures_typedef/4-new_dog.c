@@ -27,7 +27,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	int namelen = _strlen(name) + 1;
 	int ownerlen = _strlen(owner) + 1;
-	int  i;
+	int  i, j;
 
 	if (name && owner)
 	{
@@ -59,8 +59,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 
-		for (i = 0; i < ownerlen; i++)
-			can->owner[i] = owner[i];
+		for (j = 0; j < ownerlen; j++)
+			can->owner[j] = owner[j];
 
 		return (can);
 	}
