@@ -32,13 +32,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (name && owner)
 	{
 		dog_t *can;
+
 		can = malloc(sizeof(dog_t));
 
 		if (can == NULL)
 			return (NULL);
 
 		can->age = age;
-
 		can->name = malloc(sizeof(char) * namelen);
 
 		if (can->name == NULL)
