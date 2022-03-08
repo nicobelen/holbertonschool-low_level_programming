@@ -3,9 +3,8 @@
 #include <stdlib.h>
 
 /**
-*
-*
-*
+* main - macro filename
+* Return: 0
 *
 */
 int main(void)
