@@ -8,6 +8,7 @@
 * @age: data
 * @owner: data
 */
+typedef struct dog dog_t;
 
 struct dog
 {
