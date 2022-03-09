@@ -1,21 +1,6 @@
 #include "dog.h"
 
 /**
-* _strlen - length of a string
-* @p: pointer
-* Return: i
-*/
-int _strlen(char *p)
-{
-	int i;
-
-	while (p[i])
-		i++;
-
-	return (i);
-}
-
-/**
 * new_dog - new dog
 * @name: data
 * @age: data
@@ -25,46 +10,26 @@ int _strlen(char *p)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int namelen = _strlen(name) + 1;
-	int ownerlen = _strlen(owner) + 1;
-	int  i, j;
+	dog_t *can;
 
-	if (dog_t == NULL)
+	can = malloc(sizeof(dog_t));
+	if (can == NULL)
 		return (NULL);
 
-	if (name && owner)
+	if (name == NULL)
 	{
-		dog_t *can;
-
-		can = malloc(sizeof(dog_t));
-
-		if (can == NULL)
-			return (NULL);
-
-		can->name = malloc(sizeof(char) * namelen);
-
-		if (can->name == NULL)
-		{
-			free(can);
-			return (NULL);
-		}
-		can->age = age;
-
-		for (i = 0; i < namelen; i++)
-			can->name[i] = name[i];
-
-		can->owner = malloc(sizeof(char) * ownerlen);
-
-		if (can->owner == NULL)
-		{
-			free(can->name);
-			free(can);
-			return (NULL);
-		}
-		for (j = 0; j < ownerlen; j++)
-			can->owner[j] = owner[j];
-
-		return (can);
+		free(can);
+		free(owner);
+		return (NULL);
 	}
-	return (NULL);
+	if (owner == NULL)
+	{
+		free(can);
+		free(name);
+		return (NULL);
+	}
+	can->name = name;
+	can->age = age;
+	can->owner = owner;
+	return (can);
 }
