@@ -38,7 +38,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		if (can == NULL)
 			return (NULL);
 
-		can->name = malloc(sizeof(char) * namelen);
+/*		can->name = malloc(sizeof(char) * namelen);*/
 
 		if (can->name == NULL)
 		{
@@ -50,7 +50,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		for (i = 0; i < namelen; i++)
 			can->name[i] = name[i];
 
-		can->owner = malloc(sizeof(char) * ownerlen);
+/*		can->owner = malloc(sizeof(char) * ownerlen);*/
 
 		if (can->owner == NULL)
 		{
