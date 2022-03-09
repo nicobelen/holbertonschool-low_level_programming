@@ -29,11 +29,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int ownerlen = _strlen(owner) + 1;
 	int  i, j;
 
-	if (name != NULL && owner != NULL)
+	if (name && owner)
 	{
-		dog_t *can;
+		struct dog_t *can;
 
-		can = malloc(sizeof(dog_t));
+		can = malloc(sizeof(struct dog_t));
 
 		if (can == NULL)
 			return (NULL);
