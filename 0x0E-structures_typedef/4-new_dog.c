@@ -29,7 +29,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int ownerlen = _strlen(owner) + 1;
 	int  i, j;
 
-	if (name && owner)
+	if (name != NULL && owner != NULL)
 	{
 		dog_t *can;
 
