@@ -48,9 +48,9 @@ void print_string(va_list s)
 */
 void print_all(const char * const format, ...)
 {
-	va_list ar;
 	int i = 0, j = 0;
 	char *sep = "";
+	va_list ar;
 
 	format_t format_ops[] = {
 		{"c", print_char},
