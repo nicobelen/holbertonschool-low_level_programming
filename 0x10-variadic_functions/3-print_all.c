@@ -1,84 +1,46 @@
 #include "variadic_functions.h"
 
 /**
-* print_char - prints a char
-* @c: parameter
-* Return: void
-*/
-void print_char(va_list c)
-{
-	printf("%c", va_arg(c, int));
-}
-/**
-* print_int - prints a integer
-* @i: parameter
-* Return: void
-*/
-void print_int(va_list i)
-{
-	printf("%i", va_arg(i, int));
-}
-/**
-* print_float - prints a float
-* @f: parameter
-* Return: void
-*/
-void print_float(va_list f)
-{
-	printf("%f", va_arg(f, double));
-}
-/**
-* print_string - print string
-* @s: string to be printed between strings
-* Return: void
-*/
-void print_string(va_list s)
-{
-	char *str = va_arg(s, char *);
-
-	if (str == NULL)
-		str = "(nil)";
-
-	printf("%s", str);
-}
-/**
-* print_all - print  all function
-* @format: list of types of arguments passed to the function
-* Return: void
-*/
+ * print_all - function with 2 parameter
+ * @format: char type pointer to string
+ *
+ * Description: prints anything followed by a new line
+ * Return: na
+ */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0;
-	char *sep = "";
-	va_list ar;
+	int j;
+	char *str;
+	char *space;
+	va_list ap;
 
-	form_t form_ops[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
-	};
-
-	va_start(ar, format);
-
-	while (format[i] != '\0')
+	va_start(ap, format);
+	j = 0;
+	while (format && format[j])
 	{
-		j = 0;
-
-		while (form_ops[j].form != NULL)
+		space = "";
+		if (format[j + 1])
+			space = ", ";
+		switch (format[j])
 		{
-			if (form_ops[j].form[0] == format[i])
-			{
-				printf("%s", sep);
-				form_ops[j].f(ar);
-				sep = ", ";
-			}
-			j++;
+
+		case 'c':
+			printf("%c%s", va_arg(ap, int), space);
+			break;
+		case 'i':
+			printf("%d%s", va_arg(ap, int), space);
+			break;
+		case 'f':
+			printf("%f%s", va_arg(ap, double), space);
+			break;
+		case 's':
+			str = va_arg(ap, char *);
+			if (!str || !*str)
+				str = "(nil)";
+			printf("%s%s", str, space);
+			break;
 		}
-		i++;
+		j++;
 	}
 	printf("\n");
-
-	va_end(ar);
 }
