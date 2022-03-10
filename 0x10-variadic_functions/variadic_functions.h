@@ -20,8 +20,8 @@ void print_all(const char * const format, ...);
 */
 typedef struct format
 {
-  char *form;
-  void (*f)(va_list);
+char *form;
+void (*f)(va_list);
 
 } form_t;
 
