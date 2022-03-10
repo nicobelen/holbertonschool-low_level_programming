@@ -52,7 +52,7 @@ void print_all(const char * const format, ...)
 	char *sep = "";
 	va_list ar;
 
-	format_t format_ops[] = {
+	form_t form_ops[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
@@ -66,12 +66,12 @@ void print_all(const char * const format, ...)
 	{
 		j = 0;
 
-		while (format_ops[j].format != NULL)
+		while (form_ops[j].form != NULL)
 		{
-			if (format_ops[j].format[0] == format[i])
+			if (form_ops[j].form[0] == format[i])
 			{
 				printf("%s", sep);
-				format_ops[j].f(ar);
+				form_ops[j].f(ar);
 				sep = ", ";
 			}
 			j++;

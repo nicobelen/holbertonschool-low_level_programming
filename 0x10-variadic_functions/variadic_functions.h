@@ -16,9 +16,10 @@ void print_all(const char * const format, ...);
 */
 typedef struct format
 {
-  char *format;
+  char *form;
   void (*f)(va_list);
-} format_t;
+
+} form_t;
 
 void print_char(va_list c);
 
