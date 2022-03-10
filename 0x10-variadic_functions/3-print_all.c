@@ -16,7 +16,7 @@ void print_char(va_list c)
 */
 void print_int(va_list i)
 {
-	printf("%d", va_arg(i, int));
+	printf("%i", va_arg(i, int));
 }
 /**
 * print_float - prints a float
