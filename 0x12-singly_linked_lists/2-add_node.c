@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
-* list_len - print elements of a list
-* @h: head of list
-* Return: counter.
+* add_node - print elements of a list
+* @h: pointer to head of list
+* @str: string recieved
+* Return: newNode.
 */
 list_t *add_node(list_t **head, const char *str)
 {
