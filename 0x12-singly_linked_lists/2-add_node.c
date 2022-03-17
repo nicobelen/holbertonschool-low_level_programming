@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-* add_node - print elements of a list
+* add_node -  dd node at beginning of the list
 * @head: pointer to head of list
 * @str: string recieved
 * Return: newNode.
