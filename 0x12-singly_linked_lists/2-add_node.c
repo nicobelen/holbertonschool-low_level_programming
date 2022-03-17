@@ -2,7 +2,7 @@
 
 /**
 * add_node - print elements of a list
-* @h: pointer to head of list
+* @head: pointer to head of list
 * @str: string recieved
 * Return: newNode.
 */
