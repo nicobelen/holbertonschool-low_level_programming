@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
-* main - check the code
-*
-* Return: Always 0.
+* print_list - print elements of a list
+* @h: head of list
+* Return: counter.
 */
 size_t print_list(const list_t *h)
 {
@@ -14,7 +14,7 @@ size_t print_list(const list_t *h)
 		if (h->str == NULL)
 			printf("[%d] %s\n", 0, "(nil)");
 		else
-			printf("[%d] %s\n", h->len, h->str);	
+			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
 		c++;
 	}
