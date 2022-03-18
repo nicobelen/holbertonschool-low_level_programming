@@ -2,8 +2,8 @@
 
 /**
 * before_main - prints a string
-* 
-*Return: void
+*
+* Return: void
 */
 void before_main(void)
 {
