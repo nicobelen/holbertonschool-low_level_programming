@@ -1,0 +1,24 @@
+#include "main.h"
+
+/**
+* clear_bit - return value of a bit at a given index
+* @n: number
+* @index: position
+* Return: 1 if it worked, -1 if an error ocurred
+*/
+int clear_bit(unsigned long int *n, unsigned int index)
+{
+    unsigned long int bit = 0;
+    int clearbit = ~(1 << index);
+    int mask = *n & clearbit;
+
+    if (n == 0)
+        return (-1);
+
+    if (index > 31)
+        return (-1);
+
+    *n = mask | (bit << index);
+
+    return (1);
+}
