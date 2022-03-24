@@ -13,8 +13,8 @@ int set_bit(unsigned long int *n, unsigned int index)
 	int mask = *n & clearbit;
 	*n = mask | (bit << index);
 
-	if (n == 0)
-		return (-1);
+/*	if (n == 0)
+		return (-1);*/
 
 	if (index > 31)
 		return (-1);
