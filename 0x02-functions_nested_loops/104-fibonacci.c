@@ -8,9 +8,9 @@
 int main(void)
 {
 	int i;
-	unsigned long int n1 = 0, n2 = 1, n3;
+	unsigned long int n1 = 1, n2 = 2, n3;
 
-	for (i = 0; i < 100; i++)
+	for (i = 1; i <= 100; i++)
 	{
 		n3 = n1 + n2;
 
@@ -19,7 +19,7 @@ int main(void)
 		n1 = n2;
 		n2 = n3;
 
-		if (i == 99)
+		if (i == 100)
 			printf("\n");
 		else
 			printf(", ");
