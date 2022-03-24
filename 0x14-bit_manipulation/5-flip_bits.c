@@ -19,11 +19,13 @@ int countbits(int n)
 }
 /**
 * flip_bits - return number of bits to be flipped
-* @n: number
-* @m: bits
+* @n: first number
+* @m: second number
 * Return: result of countbits
 */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
+	if (n == 0 || m == 0)
+		return (0);
 	return (countbits(n ^ m));
 }
