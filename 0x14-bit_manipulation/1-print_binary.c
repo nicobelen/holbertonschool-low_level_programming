@@ -7,15 +7,8 @@
 */
 void print_binary(unsigned long int n)
 {
-    unsigned long int j, k, andmask;
-    unsigned long int i;
+    if (n > 1)
+		print_binary(n>>1);
 
-    for (i = n; i >= 0; i--)
-	{
-		j = i;
-		andmask = 1<<j;
-		k = n&andmask;
-
-		k == 0 ? _putchar('0') : _putchar('1');
-	}
+	_putchar((n&1) + 48);
 }
