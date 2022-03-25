@@ -5,7 +5,7 @@
 * @n: int n
 * Return: counter
 */
-int countbits(unsigned int n)
+int countbits(unsigned long int n)
 {
 	unsigned int count = 0;
 
