@@ -5,9 +5,9 @@
 * @n: int n
 * Return: counter
 */
-int countbits(int n)
+int countbits(unsigned int n)
 {
-	int count = 0;
+	unsigned int count = 0;
 
 	while (n != 0)
 	{
@@ -25,5 +25,5 @@ int countbits(int n)
 */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-		return (countbits(n ^ m));
+	return (countbits(n ^ m));
 }
