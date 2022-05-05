@@ -2,12 +2,12 @@
 
 /**
 * insert_dnodeint_at_index - check code
-* @head: pointer to head of list
+* @h: pointer to head of list
 * @idx: index where the node should be added
 * @n: given position
 * Return: adress of newnode
 */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *tmp, *newNode;
 
