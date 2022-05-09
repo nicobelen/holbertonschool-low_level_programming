@@ -52,7 +52,6 @@ int _isalpha(int c)
 * _isupper - code
 * @c: parameter
 * Return: something
-*
 */
 int _isupper(int c)
 {
@@ -63,6 +62,7 @@ int _isupper(int c)
 
 	return (0);
 }
+
 /**
 * _abs - check code
 *

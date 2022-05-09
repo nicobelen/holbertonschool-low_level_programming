@@ -37,6 +37,7 @@ int _atoi(char *s)
 {
 	int op = 1;
 	unsigned int n = 0;
+
 	do {
 		if (*s == '-')
 			op *= -1;
@@ -50,6 +51,7 @@ int _atoi(char *s)
 void _puts(char *str)
 {
 	int a = 0;
+
 	while (str[a] != '\0')
 	{
 		_putchar(str[a]);
@@ -60,6 +62,7 @@ void _puts(char *str)
 char *_strcpy(char *dest, char *src)
 {
 	int i;
+
 	for (i = 0; i <= _strlen(src); i++)
 		dest[i] = src[i];
 	return (dest);
