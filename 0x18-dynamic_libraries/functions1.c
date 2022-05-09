@@ -33,6 +33,11 @@ int _strlen(char *s)
 
 	return (len);
 }
+/**
+ * _atoi - atoi
+ * @s: parameter
+ * Return: n * op
+*/
 int _atoi(char *s)
 {
 	int op = 1;
@@ -48,6 +53,11 @@ int _atoi(char *s)
 	} while (*s++);
 	return (n * op);
 }
+/**
+ * _puts - puts
+ * @str: parameter
+ * Return: void
+*/
 void _puts(char *str)
 {
 	int a = 0;
@@ -59,6 +69,12 @@ void _puts(char *str)
 	}
 	_putchar('\n');
 }
+/**
+ * _strcpy - strcpy
+ * @dest: parameter
+ * @src: parameter
+ * Return: dest
+*/
 char *_strcpy(char *dest, char *src)
 {
 	int i;
