@@ -33,7 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
-	nwElm->key = key;
+	nwElm->key = strdup(key);
 	nwElm->value = auxvalue;
 	nwElm->next = ht->array[index];
 	ht->array[index] = nwElm;
