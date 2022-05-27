@@ -9,29 +9,29 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-    unsigned long int index;
-    char *auxvalue = strdup(value);
+	unsigned long int index;
+	char *auxvalue = strdup(value);
 
-    if(key == NULL)
-        return (0);
+	if (key == NULL)
+		return (0);
 
-    ht = malloc(sizeof(hash_table_t));
+	ht = malloc(sizeof(hash_table_t));
 
-    if(ht == NULL)
-        return (0);
-    
-    index = hash_djb2((const unsigned char*) key);
+	if (ht == NULL)
+		return (0);
 
-    while(ht->array[index]->key != NULL)
-    {
-        if(strcmp(key, ht->array[index]->key) == 0)
-        {
-            ht->array[index]->value = auxvalue;
-            return (1);
-        }
-    }
-    ht->array[index]->key = (char*)key;
-    ht->array[index]->value = auxvalue;
+	index = hash_djb2((const unsigned char *) key);
 
-    return (1);
+	while (ht->array[index]->key != NULL)
+	{
+		if (strcmp(key, ht->array[index]->key) == 0)
+		{
+			ht->array[index]->value = auxvalue;
+			return (1);
+		}
+	}
+	ht->array[index]->key = key;
+	ht->array[index]->value = auxvalue;
+
+	return (1);
 }
