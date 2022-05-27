@@ -15,23 +15,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (key == NULL)
 		return (0);
 
-	ht = malloc(sizeof(hash_table_t));
+	ht = malloc(sizeof(hash_table_t) * 1);
 
 	if (ht == NULL)
 		return (0);
 
 	index = hash_djb2((const unsigned char *) key);
 
-	while (ht->array[index]->key != NULL)
+	while (ht->array[index] != NULL)
 	{
 		if (strcmp(key, ht->array[index]->key) == 0)
 		{
 			ht->array[index]->value = auxvalue;
 			return (1);
 		}
+        ht->array[0]->key = (char *) key;
+        ht->array[0]->value = auxvalue;
 	}
-	ht->array[index]->key = (char *) key;
-	ht->array[index]->value = auxvalue;
 
 	return (1);
 }
