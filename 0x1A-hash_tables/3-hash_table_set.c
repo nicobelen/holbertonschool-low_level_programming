@@ -25,7 +25,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	for (; ht->array[iter] <= ht->array[index]; iter++)
 	{
-		if (strcmp(key, ht->array[index]->key) == 0)
+		if (strcmp(ht->array[iter]->key, ht->array[index]->key) == 0)
 		{
 			ht->array[index]->value = auxvalue;
 			return (1);
