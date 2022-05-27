@@ -13,18 +13,12 @@ void hash_table_print(const hash_table_t *ht)
 	if (ht == NULL)
 		return;
 
-	tmp = malloc(sizeof(hash_node_t));
-
-	if (tmp == NULL)
-		return;
-
 	printf("{");
 
 	for (; i < ht->size; i++)
 	{
 		if (ht->array[i] == NULL)
 		{
-			i++;
 			continue;
 		}
 		if (com == 1)
