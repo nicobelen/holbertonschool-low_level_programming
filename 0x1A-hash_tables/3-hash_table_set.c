@@ -30,9 +30,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			ht->array[index]->value = auxvalue;
 			return (1);
 		}
-		ht->array[0]->key = (char *) key;
-		ht->array[0]->value = auxvalue;
 	}
+	ht->array[0]->key = (char *) key;
+	ht->array[0]->value = auxvalue;
 
 	return (1);
 }
