@@ -14,7 +14,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (key == NULL || ht == NULL)
 		return (0);
-    index = key_index((unsigned char *)key, ht->size);
+	index = key_index((unsigned char *)key, ht->size);
 	nwElm = malloc(sizeof(hash_node_t));
 	if (nwElm == NULL)
 		return (0);
