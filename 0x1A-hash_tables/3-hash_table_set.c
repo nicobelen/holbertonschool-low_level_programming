@@ -27,12 +27,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(ht->array[iter]->key, key) == 0)
 		{
-			ht->array[index]->value = auxvalue;
+			ht->array[0]->key = (char *) key;
+			ht->array[0]->value = auxvalue;
 			return (1);
 		}
 	}
-	ht->array[0]->key = (char *) key;
-	ht->array[0]->value = auxvalue;
+	ht->array[index]->key = (char *) key;
+	ht->array[index]->value = auxvalue;
 
 	return (1);
 }
