@@ -21,7 +21,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL)
 		return (0);
 
-	index = hash_djb2((const unsigned char *) key);
+	index = key_index((const unsigned char *) key, sizeof(ht));
 
 	for (; ht->array[iter] <= ht->array[index]; iter++)
 	{
