@@ -11,7 +11,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	char *auxvalue = strdup(value);
-	int iter = 0;
+	unsigned long int iter = 0;
 
 	if (key == NULL)
 		return (0);
