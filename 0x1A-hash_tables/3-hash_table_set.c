@@ -9,14 +9,15 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index;
+	unsigned long int index  = 0;
 	char *auxvalue = strdup(value);
+	char *auxkey = strdup(key);
 	hash_node_t *nwElm, *aux;
 
 	if (key == NULL || ht == NULL)
 		return (0);
 
-	index = key_index((const unsigned char *) key, ht->size);
+	index = key_index((unsigned char *) key, ht->size);
 
 	nwElm = malloc(sizeof(hash_node_t));
 
@@ -33,7 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
-	nwElm->key = strdup(key);
+	nwElm->key = auxkey;
 	nwElm->value = auxvalue;
 	nwElm->next = ht->array[index];
 	ht->array[index] = nwElm;
