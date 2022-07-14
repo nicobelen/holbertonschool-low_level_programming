@@ -3,7 +3,7 @@ SRC = main.c school.c
 OBJ = $(SRC:c=o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
-ALL_CFLAGS = -I. $(CFLAGS)
+ALL_CFLAGS = -I$(m.h) $(CFLAGS)
 
 all: $(OBJ)
 	$(CC) $(ALL_CFLAGS) $(OBJ) -o $(NAME)
