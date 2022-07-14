@@ -8,6 +8,3 @@ all: $(OBJ)
 main.o: main.c m.h
 
 school.o: school.c m.h
-
-clean:
-	rm -f $(NAME) $(OBJ)
