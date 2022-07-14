@@ -8,6 +8,11 @@ ALL_CFLAGS = $(CFLAGS)
 .PHONY: all
 all: $(OBJ)
 	$(CC) $(ALL_CFLAGS) $(OBJ) -o $(NAME)
+
+main.o: main.c m.h
+
+school.o: school.c m.h
+
 .PHONY: clean
 clean:
 	$(RM) *~ $(NAME)
